@@ -1,8 +1,8 @@
-import { lusitana } from '@/app/ui/fonts';
+import { roboto } from '@/app/ui/fonts';
 import {
   AtSymbolIcon,
   KeyIcon,
-  ExclamationCircleIcon,
+  //ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
@@ -11,8 +11,8 @@ export default function LoginForm() {
   return (
     <form className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-        <h1 className={`${lusitana.className} mb-3 text-2xl`}>
-          Please log in to continue.
+        <h1 className={`${roboto.className} mb-3 text-2xl`}>
+          Connectez-vous pour continuer s'il vous plaît.
         </h1>
         <div className="w-full">
           <div>
@@ -39,7 +39,7 @@ export default function LoginForm() {
               className="mb-3 mt-5 block text-xs font-medium text-gray-900"
               htmlFor="password"
             >
-              Password
+              Mot de passe
             </label>
             <div className="relative">
               <input
@@ -47,7 +47,7 @@ export default function LoginForm() {
                 id="password"
                 type="password"
                 name="password"
-                placeholder="Enter password"
+                placeholder="Mot de passe"
                 required
                 minLength={6}
               />
