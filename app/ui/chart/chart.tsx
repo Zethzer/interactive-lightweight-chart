@@ -47,10 +47,10 @@ export default function Chart() {
             { open: 10.93, high: 11.53, low: 10.76, close: 10.96, time: (1643205476 as Time) }
         ];
         candlestickSeries.setData(data);
-        
+
         const maData = calculateMovingAverageSeriesData(data, 5);
         maSeries.setData(maData);
-    
+
         chart.timeScale().fitContent();
 
         return () => {
