@@ -1,6 +1,5 @@
 import Logo from '@/app/ui/logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import Chart from '@/app/ui/chart/chart';
 
 export default function Page() {
     return (
@@ -9,15 +8,18 @@ export default function Page() {
                 <Logo />
             </div>
             <div className="mt-4 flex grow flex-col gap-4 rounded-lg bg-gray-50 px-6 py-10 md:px-20">
-                <p className="text-3xl text-gray-800 leading-normal">
-                    <strong>Welcome to Bitlearn Scalping Backtest.</strong>
+                <p className="text-xl text-gray-800">
+                    <strong>BTCUSDT.P Pair</strong>
                 </p>
-                <Link
-                    href="/login"
-                    className="flex items-center gap-5 self-start rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-500 md:text-base"
-                >
-                    <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-                </Link>
+                <div id="chart-container">
+                    <Chart />
+                </div>
+            </div>
+            <div>
+                <p className="text-gray-800 text-sm text-center">
+                    TradingView Lightweight Charts&trade;
+                    Copyright &copy; 2025 <a href='https://www.tradingview.com/'><u>TradingView, Inc.</u></a>
+                </p>
             </div>
         </main>
     );
